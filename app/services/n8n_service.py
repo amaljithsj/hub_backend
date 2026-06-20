@@ -29,7 +29,7 @@ async def trigger_document_summary(
         "email": email,
     }
 
-    async with httpx.AsyncClient(timeout=60) as client:
+    async with httpx.AsyncClient(timeout=120) as client:
         response = await client.post(
             settings.n8n_webhook_url,
             json=payload,
