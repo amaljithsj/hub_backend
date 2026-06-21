@@ -46,3 +46,14 @@ htmlcov/
 
 # Uploads (local dev only)
 uploads/
+# Ignore all __pycache__ folders anywhere in the project
+__pycache__/
+
+# Ignore the uploads directory
+uploads/
+.env
+
+node_modules/
+**/node_modules/
+dist/
+.vscode/

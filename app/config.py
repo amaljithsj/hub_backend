@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     debug: bool = False
 
     # Database
-    database_url: str = "postgresql+asyncpg://cixiohub:cixiohub@localhost:5432/cixiohub"
+    database_url: str = "postgresql+asyncpg://postgres:admin123@localhost:5432/cixiohub"
 
     # Redis
     redis_url: str = "redis://localhost:6379/0"
@@ -28,6 +28,9 @@ class Settings(BaseSettings):
     # AI Service — handles LLM, RAG, document extraction
     ai_service_url: str = "http://localhost:8003"
     n8n_webhook_url: str = "http://localhost:5678/webhook/document-summary"
+
+    # Notify Service
+    notify_service_url: str = "http://localhost:8001"
 
     # ChromaDB
     chroma_host: str = "localhost"
@@ -58,3 +61,4 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+print("DB URL:", settings.database_url)
